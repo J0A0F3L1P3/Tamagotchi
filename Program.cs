@@ -9,9 +9,9 @@ internal class Tamagotchi
         string nome = Console.ReadLine();
         nome = nome == "" ? "Tamagotchi" : nome;
 
-        int apetite = 80;
-        int sede = 10;
-        int felicidade = 50;
+        int fome = 20;
+        int sede = 25;
+        int feliz = 50;
         string Abandonar = "nao";
 
         while (Abandonar == "nao")
@@ -26,36 +26,34 @@ internal class Tamagotchi
             Console.Clear();
             Console.WriteLine($"========== {nome} ==========");
             Console.WriteLine("    ,,,");
-            Console.WriteLine("  {|6 6|}     apetite: " + apetite);
+            Console.WriteLine("  {|6 6|}     fome: " + fome);
             Console.WriteLine("   (_0_)      sede: " + sede);
-            Console.WriteLine("  _| ^ |_     felicidade: " + felicidade);
+            Console.WriteLine("  _| ^ |_     feliz: " + feliz);
             Console.WriteLine(" (_|_|_|_)");
         }
 
         void Acao()
         {
-            Console.WriteLine("\n============= Ação =============");
+            Console.WriteLine("\n========== Ação ==========");
             Console.WriteLine("1. Alimentar  2. Dar água\n3. Brincar    4. Abandonar");
-            Console.WriteLine("    (Digite o número)");
-
-            Console.Write("\nO que fazer? ");
+            Console.Write("\nInsira o número da ação: ");
             int acao = int.Parse(Console.ReadLine());
 
             switch (acao)
             {
                 case 1:
-                    apetite = apetite <= 90 ? apetite += 10 : 100;
-                    sede = sede >= 5 ? sede += 5 : 0;
-                    felicidade = felicidade <= 90 ? felicidade -= 5 : 100;
+                    fome = fome >= 10 ? fome -= 10 : 0;
+                    sede += 5;
+                    feliz -= 5;
                     break;
                 case 2:
                     sede = sede >= 5 ? sede -= 5 : 0;
-                    felicidade = felicidade <= 95 ? felicidade -= 5 : 100;
+                    feliz -= 5;
                     break;
                 case 3:
-                    apetite = apetite >= 10 ? apetite -= 10 : 0;
-                    sede = sede >= 5 ? sede += 5 : 0;
-                    felicidade = felicidade <= 90 ? felicidade += 10 : 100;
+                    fome += 10;
+                    sede += 5;
+                    feliz = feliz <= 90 ? feliz += 10 : 100;
                     break;
                 case 4:
                     Abandonar = "sim";
@@ -68,7 +66,7 @@ internal class Tamagotchi
 
         void VerificarVida()
         {
-            if (apetite <= 0 || sede >= 100 || felicidade <= 0)
+            if (fome >= 100 || sede >= 100 || feliz <= 0)
             {
                 Abandonar = "sim";
                 Console.Clear();
