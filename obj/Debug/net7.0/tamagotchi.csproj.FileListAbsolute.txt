@@ -1,0 +1,15 @@
+C:\Users\noteb\Downloads\tamagotchi\bin\Debug\net7.0\tamagotchi.exe
+C:\Users\noteb\Downloads\tamagotchi\bin\Debug\net7.0\tamagotchi.deps.json
+C:\Users\noteb\Downloads\tamagotchi\bin\Debug\net7.0\tamagotchi.runtimeconfig.json
+C:\Users\noteb\Downloads\tamagotchi\bin\Debug\net7.0\tamagotchi.dll
+C:\Users\noteb\Downloads\tamagotchi\bin\Debug\net7.0\tamagotchi.pdb
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.csproj.AssemblyReference.cache
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.AssemblyInfoInputs.cache
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.AssemblyInfo.cs
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.csproj.CoreCompileInputs.cache
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.dll
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\refint\tamagotchi.dll
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.pdb
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\tamagotchi.genruntimeconfig.cache
+C:\Users\noteb\Downloads\tamagotchi\obj\Debug\net7.0\ref\tamagotchi.dll
