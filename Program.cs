@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 internal class Tamagotchi
 {
@@ -12,9 +12,9 @@ internal class Tamagotchi
         int apetite = 80;
         int sede = 10;
         int felicidade = 50;
-        string sair = "nao";
+        string Abandonar = "nao";
 
-        while (sair == "nao")
+        while (Abandonar == "nao")
         {
             MostrarPet();
             Acao();
@@ -35,7 +35,8 @@ internal class Tamagotchi
         void Acao()
         {
             Console.WriteLine("\n============= Ação =============");
-            Console.WriteLine("1. Alimentar  2. Dar água\n3. Brincar    4. Sair");
+            Console.WriteLine("1. Alimentar  2. Dar água\n3. Brincar    4. Abandonar");
+            Console.WriteLine("(Escreva apenas o número)");
 
             Console.Write("\nO que fazer? ");
             int acao = int.Parse(Console.ReadLine());
@@ -43,53 +44,21 @@ internal class Tamagotchi
             switch (acao)
             {
                 case 1:
-                    if (apetite >= 90)
-                    {
-                        Console.WriteLine("Não está com fome no momento.");
-                    }
-                    else
-                    {
-                        apetite += 10;
-                        sede += 5;
-                        felicidade -= 5;
-                        if (felicidade < 0)
-                        {
-                            felicidade = 0;
-                        }
-                    }
+                    apetite = apetite <= 90 ? apetite += 10 : 100;
+                    sede = sede >= 5 ? sede += 5 : 0;
+                    felicidade = felicidade <= 90 ? felicidade -= 5 : 100;
                     break;
                 case 2:
-                    if (sede <= 5)
-                    {
-                        Console.WriteLine("Não está com sede no momento.");
-                    }
-                    else
-                    {
-                        sede -= 5;
-                    }
+                    sede = sede >= 5 ? sede -= 5 : 0;
+                    felicidade = felicidade <= 95 ? felicidade -= 5 : 100;
                     break;
                 case 3:
-                    if (apetite <= 10)
-                    {
-                        Console.WriteLine("Está com fome demais para brincar.");
-                    }
-                    else if (sede >= 5)
-                    {
-                        apetite -= 10;
-                        sede -= 5;
-                        felicidade += 5;
-                        if (felicidade > 100)
-                        {
-                            felicidade = 100;
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Está com sede demais para brincar.");
-                    }
+                    apetite = apetite >= 10 ? apetite -= 10 : 0;
+                    sede = sede >= 5 ? sede += 5 : 0;
+                    felicidade = felicidade <= 90 ? felicidade += 10 : 100;
                     break;
                 case 4:
-                    sair = "sim";
+                    Abandonar = "sim";
                     break;
                 default:
                     Console.WriteLine("Opção inválida. Tente novamente.");
@@ -101,7 +70,7 @@ internal class Tamagotchi
         {
             if (apetite <= 0 || sede >= 100 || felicidade <= 0)
             {
-                sair = "sim";
+                Abandonar = "sim";
                 Console.Clear();
                 Console.WriteLine("         _____");
                 Console.WriteLine("        | ~~~ |");
