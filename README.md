@@ -2,7 +2,7 @@
 
 O Tamagotchi é um projeto em C# que simula um animal de estimação virtual, onde você pode interagir com ele alimentando-o, dando água, brincando e verificando seu estado de saúde.
 
-<img src="tamagotchi.png" alt="Tamagotchi">
+<img src="Tamagotchi.png" alt="Tamagotchi">
 
 ## Funcionalidades
 - Alimentar o Tamagotchi
