@@ -36,7 +36,7 @@ internal class Tamagotchi
         {
             Console.WriteLine("\n============= Ação =============");
             Console.WriteLine("1. Alimentar  2. Dar água\n3. Brincar    4. Abandonar");
-            Console.WriteLine("(Escreva apenas o número)");
+            Console.WriteLine("    (Digite o número)");
 
             Console.Write("\nO que fazer? ");
             int acao = int.Parse(Console.ReadLine());
